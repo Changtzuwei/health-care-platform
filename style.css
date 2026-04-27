@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #5a3e2b;
+}
+
+header {
+  background: linear-gradient(135deg, #9fd8ff, #c7b7ff);
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.88);
+  padding: 45px;   /* 原本35 → 放大 */
+  margin-bottom: 20px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+#introBox {
+  max-width: 1000px;   /*  放大 */
+  width: 90%;      
+  margin: 60px auto;
+  padding: 50px;       /* 內部空間變大 */
+}
+
+h2 {
+  color: #7b6fd6;
+}
+
+h3 {
+  color: #6aaee8;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 14px 0;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #a7ddff, #c8b8ff);
+
+  color: #4b2e1f;   /* ⭐ 按鈕文字改深咖啡色 */
+
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.step {
+  background-color: rgba(234, 245, 255, 0.92);
+  padding: 18px;
+  border-left: 5px solid #a7ddff;
+  margin: 14px 0;
+  border-radius: 12px;
+  line-height: 1.8;
+}
+
+.warning {
+  background-color: #ffecec;
+  border-left: 5px solid #ff6b6b;
+  font-weight: bold;
+}
+
+.robot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.robot-img {
+  width: 200px;
+}
+
+.speech-bubble {
+  background: #eef7ff;
+  border-radius: 25px;
+  padding: 30px 45px;
+  max-width: 520px;   /* 放大 */
+  font-size: 22px;    /* 字變大 */
+  line-height: 1.9;
+}
+
+.emergency-btn {
+  background: linear-gradient(135deg, #ff9aa2, #c8b8ff);
+}
+
+.emergency-float {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 260px;
+  z-index: 999;
+}
+
+.call-btn, .er-btn {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 16px;
+  border-radius: 14px;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #4b2e1f;
+}
+
+.call-btn {
+  background: linear-gradient(135deg, #ff8a8a, #ffb3c1);
+}
+
+.er-btn {
+  background: linear-gradient(135deg, #9fd8ff, #c7b7ff);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.disease-category,
+.record-item {
+  background-color: rgba(247, 251, 255, 0.95);
+  border-left: 5px solid #a7ddff;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+
+.img-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.img-box {
+  width: 300px;
+  text-align: center;
+  background: #f7fbff;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.img-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  .robot-container {
+    flex-direction: column;
+  }
+
+  .speech-bubble {
+    font-size: 16px;
+  }
+
+  .emergency-float {
+    position: static;
+    width: auto;
+    margin: 20px 15px;
+  }
+}

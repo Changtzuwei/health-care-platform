@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨領域智慧居家衛教平台</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#a7ddff">
+</head>
+<body>
+
+  <header>
+    <h1>跨領域智慧居家衛教平台</h1>
+    <p>即時傷口處置、疾病衛教與每日健康紀錄</p>
+  </header>
+
+  <main>
+
+    <section class="card" id="introBox">
+      <div class="robot-container">
+        <img src="123.png" class="robot-img" alt="健康小助手">
+        <div class="speech-bubble" id="botQuestion">
+          嗨！我是健康小助手 🤖<br>
+          先來測測你的居家照護知識吧！
+        </div>
+      </div>
+
+      <div id="introButtons">
+  <button onclick="startQuiz()">開始小測驗</button>
+  <button class="emergency-btn" onclick="skipIntro()">我現在很緊急，直接進入衛教</button>
+</div>
+
+      <div id="quizBox"></div>
+    </section>
+
+    <section id="mainApp" style="display:none;">
+      <section class="card">
+        <h2>請選擇功能</h2>
+
+        <button onclick="showGuide('wound')">突發傷口處置</button>
+        <button onclick="showGuide('muscle')">身體痠痛</button>
+        <button onclick="showGuide('allergy')">過敏反應</button>
+        <button onclick="showGuide('heart')">疑似心梗 / 窒息</button>
+        <button onclick="showGuide('disease')">常見疾病總覽</button>
+        <button onclick="showGuide('record')">每日身體狀況紀錄</button>
+        <button onclick="showGuide('smart')">智能症狀推薦</button>
+      </section>
+
+      <section class="card" id="guideBox">
+        <h2>衛教指引</h2>
+        <p>請先選擇你的狀況或功能。</p>
+      </section>
+    </section>
+
+<section class="emergency-float">
+  <a class="call-btn" href="tel:119">撥打 119</a>
+  <a class="er-btn" href="https://www.google.com/maps/search/急診室" target="_blank">
+    尋找附近急診室
+  </a>
+</section>
+
+  </main>
+
+  <footer>
+    <p>本平台僅提供衛教參考，緊急情況請立即撥打 119。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
